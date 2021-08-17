@@ -1,0 +1,11 @@
+version: '2'
+services:
+  redis-server:
+    image: 'redis'
+    ports:
+      - '4002:6379'
+  node-app:
+    #restart: on-failure
+    build: .
+    ports:
+      - '4001:8080'  
